@@ -164,6 +164,8 @@ function checkWinner(row, column) {
 
 function checkColumn(row, column) {
     let count = 1;
+    let count1 = 1;
+    let count2 = 1;
     let currentColumn = column;
     while (count < WINNER_COUNT) {
         if (
@@ -173,6 +175,7 @@ function checkColumn(row, column) {
 
         ) {
             count++;
+            count1++;
             column--;
         } else {
             count = 1;
@@ -188,6 +191,7 @@ function checkColumn(row, column) {
 
         ) {
             count++;
+            count2++;
             column++;
         } else {
             count = 1;
@@ -195,7 +199,7 @@ function checkColumn(row, column) {
         }
     }
 
-    if (count == WINNER_COUNT) {
+    if (count == WINNER_COUNT || (count1 + count2) > WINNER_COUNT ) {
         alert(currentTurn + ' is winner');
     }
 }
@@ -203,6 +207,8 @@ function checkColumn(row, column) {
 
 function checkRow(row, column) {
     let count = 1;
+    let count1 = 1;
+    let count2 = 1;
     let currentRow = row;
     while (count < WINNER_COUNT) {
         if (
@@ -212,6 +218,7 @@ function checkRow(row, column) {
 
         ) {
             count++;
+            count1++;
             row--;
         } else {
             count = 1;
@@ -227,6 +234,7 @@ function checkRow(row, column) {
 
         ) {
             count++;
+            count2++;
             row++;
         } else {
             count = 1;
@@ -234,13 +242,15 @@ function checkRow(row, column) {
         }
     }
 
-    if (count == WINNER_COUNT) {
+    if (count == WINNER_COUNT || (count1 + count2) > WINNER_COUNT ) {
         alert(currentTurn + ' is winner');
     }
 }
 
 function checkCross1(row, column) {
     let count = 1;
+    let count1 = 1;
+    let count2 = 1;
     let currentRow = row;
     let currenColumn = column;
     while (count < WINNER_COUNT) {
@@ -251,6 +261,7 @@ function checkCross1(row, column) {
 
         ) {
             count++;
+            count1++;
             row--;
             column--;
         } else {
@@ -268,6 +279,7 @@ function checkCross1(row, column) {
 
         ) {
             count++;
+            count2++;
             row++;
             column++;
         } else {
@@ -276,7 +288,7 @@ function checkCross1(row, column) {
         }
     }
 
-    if (count == WINNER_COUNT) {
+    if (count == WINNER_COUNT || (count1 + count2) > WINNER_COUNT ) {
         alert(currentTurn + ' is winner');
     }
 }
@@ -284,6 +296,8 @@ function checkCross1(row, column) {
 
 function checkCross2 (row, column) {
     let count = 1;
+    let count1 = 1;
+    let count2 = 1;
     let currentRow = row;
     let currenColumn = column;
     while (count < WINNER_COUNT) {
@@ -294,6 +308,7 @@ function checkCross2 (row, column) {
 
         ) {
             count++;
+            count1++;
             row++;
             column--;
         } else {
@@ -311,6 +326,7 @@ function checkCross2 (row, column) {
 
         ) {
             count++;
+            count2++;
             row--;
             column++;
         } else {
@@ -319,7 +335,7 @@ function checkCross2 (row, column) {
         }
     }
 
-    if (count == WINNER_COUNT) {
+    if (count == WINNER_COUNT || (count1 + count2) > WINNER_COUNT ) {
         alert(currentTurn + ' is winner');
     }
 }
