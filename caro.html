@@ -8,11 +8,11 @@
     <title>Document</title>
     <style>
         .cell {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             border: solid 1px red;
             text-align: center;
-            font-size: 20pt;
+            font-size: 15pt;
             cursor: pointer;
             color: green;
         }
@@ -106,9 +106,9 @@ let currentTurn = 'X';
 const WINNER_COUNT = 5;
 
 function start() {
-    for (let i = 0 ; i < 22; i++) {
+    for (let i = 0 ; i < 20; i++) {
         board[i] = [];
-        for (let j = 0 ; j < 22; j++) {
+        for (let j = 0 ; j < 20; j++) {
             board[i][j] = '';
         }
     }
